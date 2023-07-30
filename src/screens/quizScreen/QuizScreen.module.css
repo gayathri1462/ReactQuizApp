@@ -1,0 +1,254 @@
+.wrapperStyling {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quizScreenWrapper {
+  composes: wrapperStyling;
+  background: linear-gradient(260deg, #fff 40%, #ffd700 40%);
+}
+
+.resultWrapper {
+  composes: wrapperStyling;
+  background: linear-gradient(110deg, #fff 60%, #ffd700 60%);
+}
+
+/* Quiz Card Screen Styling */
+.quizCard {
+  max-width: 50%;
+  overflow-wrap: break-word;
+  padding: 0em 2em;
+}
+
+.fontStyling {
+  font-family: "Castoro", serif;
+  font-weight: 900;
+}
+
+.activeQuestionNo {
+  composes: fontStyling;
+  font-size: 55px;
+}
+
+.totalQuestion {
+  composes: fontStyling;
+  font-size: 35px;
+}
+
+.quizCard h2 {
+  font-family: "Merriweather", serif;
+  overflow-wrap: break-word;
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+.optionsDiv {
+  padding: 2em 0em;
+}
+
+.optionStyling {
+  padding: 0.25em;
+  font-family: "Castoro", serif;
+  font-size: 27px;
+  cursor: pointer;
+  width: fit-content;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.optionStyling:hover {
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.selectedAnswer {
+  composes: optionStyling;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.option {
+  composes: optionStyling;
+}
+
+.buttonStyling {
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: "Castoro", cursive;
+  line-height: 48px;
+  width: 250px;
+  padding: 0px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+.disabledDiv {
+  composes: buttonStyling;
+  background-color: #ffd700;
+  border: 1px solid #ffd700;
+}
+
+.nextBtnDiv {
+  composes: buttonStyling;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Result Screen Styling */
+.resultScreen {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 4em;
+}
+
+.headerText {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "Castoro Titling", cursive;
+}
+
+.result {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 0em;
+}
+
+.resultChart {
+  max-width: 30%;
+  margin: 0em 1em;
+}
+
+.infoStyling {
+  padding: 0.25em;
+  cursor: pointer;
+  width: fit-content;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.textStyling {
+  font-family: "Castoro", cursive;
+  composes: infoStyling;
+  font-size: 21px;
+}
+
+.numberStyling {
+  font-family: "Merriweather", serif;
+  composes: infoStyling;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.reviewBtn {
+  composes: buttonStyling;
+  background-color: #ffd700;
+  border: 1px solid #ffd700;
+  margin: 1em 1em 1em 0em;
+}
+
+.reviewBtn:hover {
+  background-color: #fff;
+}
+
+.retakeBtn {
+  composes: buttonStyling;
+  background-color: #fff;
+  border: 1px solid #fff;
+  margin: 1em 1em 1em 0em;
+}
+
+.retakeBtn:hover {
+  border: 1px solid #ffd700;
+}
+
+.btnDiv {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/** Responsive Styling **/
+@media (max-width: 800px) {
+  .quizCard {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .resultScreen {
+    max-width: 85%;
+    margin: 1em;
+  }
+
+  .result {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 500px) {
+  .result {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .quizCard {
+    max-width: 85%;
+  }
+
+  .activeQuestionNo {
+    font-size: 35px;
+  }
+
+  .totalQuestion {
+    font-size: 20px;
+  }
+
+  .quizCard h2 {
+    font-size: 20px;
+  }
+
+  .optionsDiv {
+    padding: 1em 0em;
+  }
+
+  .optionStyling {
+    font-size: 18px;
+  }
+
+  .headerText {
+    font-size: 30px;
+  }
+
+  .resultChart {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 300px) {
+  .quizCard {
+    max-width: 95%;
+  }
+
+  .buttonStyling {
+    font-size: 16px;
+    width: 150px;
+  }
+}

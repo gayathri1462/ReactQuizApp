@@ -1,0 +1,74 @@
+.reviewScreenWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #fff 50%, #ffd700 50%);
+}
+
+.reviewScreen {
+  padding: 2em 2em 0em 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.columnContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.column {
+  flex-basis: 50%;
+}
+
+.btnDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonStyling {
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: "Castoro", cursive;
+  line-height: 48px;
+  width: 250px;
+  padding: 0px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+.btnDiv {
+  padding-bottom: 2em;
+}
+
+.retakeBtn {
+  composes: buttonStyling;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.retakeBtn:hover {
+  border: 1px solid #ffd700;
+}
+
+/** Responsive Styling **/
+@media (max-width: 600px) {
+  .reviewScreenWrapper {
+    background: linear-gradient(180deg, #fff 50%, #ffd700 50%);
+  }
+
+  .columnContainer {
+    flex-direction: column;
+  }
+
+  .btnDiv {
+    padding-bottom: 2em;
+  }
+}

@@ -1,0 +1,281 @@
+.initialScreenWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.countDownWrapper {
+  background: linear-gradient(120deg, #fff 40%, #ffd700 40%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Initial Screen Styling */
+.boxStyling {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 140px;
+  font-weight: 700;
+  font-family: "Castoro Titling", cursive;
+}
+
+.leftDiv {
+  composes: boxStyling;
+  background-color: #ffd700;
+  color: #000;
+  justify-content: flex-end;
+  padding-left: 1em;
+}
+
+.rightDiv {
+  composes: boxStyling;
+  background-color: #fff;
+  color: #000;
+  justify-content: flex-start;
+  padding-right: 1em;
+}
+
+.btnDiv {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btnDiv button {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Castoro", cursive;
+  line-height: 48px;
+  width: 250px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btnDiv button:hover {
+  background-color: #ffd700;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btnDiv button span {
+  padding-right: 10px;
+}
+
+/* Counter Screen Styling */
+.counter {
+  width: 300px;
+  height: 300px;
+  margin: 1em 4em;
+  background-color: #ffd700;
+  border-radius: 5%;
+  -webkit-box-shadow: -5px 1px 63px -21px rgba(0, 0, 0, 1);
+  -moz-box-shadow: -5px 1px 63px -21px rgba(0, 0, 0, 1);
+  box-shadow: -5px 1px 63px -21px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counterInfoStyling {
+  font-family: "Castoro", cursive;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberStyling {
+  composes: counterInfoStyling;
+  font-size: 130px;
+  font-weight: 900;
+}
+
+.textStyling {
+  composes: counterInfoStyling;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.instructionsDiv {
+  width: 40%;
+  height: auto;
+  margin: 1em 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.instructionsDiv h3 {
+  font-family: "Castoro Titling", cursive;
+  font-size: 35px;
+  font-weight: 800;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.instructionsDiv li {
+  width: 100%;
+  font-family: "Castoro", serif;
+  font-size: 23px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+
+/** Responsive Styling **/
+@media (max-width: 1180px) {
+  .boxStyling {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 750px) {
+  .boxStyling {
+    font-size: 80px;
+  }
+
+  .instructionsDiv {
+    margin: 1em 2em;
+  }
+
+  .instructionsDiv h3 {
+    font-size: 28px;
+  }
+
+  .instructionsDiv li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .boxStyling {
+    font-size: 60px;
+  }
+
+  .countDownWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .instructionsDiv {
+    margin: 2em;
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .boxStyling {
+    font-size: 40px;
+  }
+
+  .counter {
+    width: 200px;
+    height: 200px;
+    margin: 1em 2em;
+  }
+
+  .numberStyling {
+    font-size: 80px;
+  }
+
+  .textStyling {
+    font-size: 60px;
+  }
+
+  .instructionsDiv {
+    margin: 2em;
+    width: 60%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 440px) {
+  .boxStyling {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 330px) {
+  .counter {
+    width: 200px;
+    height: 200px;
+    margin: 1em 2em;
+  }
+
+  .numberStyling {
+    font-size: 80px;
+  }
+
+  .textStyling {
+    font-size: 60px;
+  }
+
+  .instructionsDiv {
+    margin: 1em;
+    width: 80%;
+    height: 80%;
+  }
+
+  .instructionsDiv h3 {
+    font-size: 20px;
+  }
+
+  .instructionsDiv li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 300px) {
+  .boxStyling {
+    font-size: 30px;
+  }
+
+  .btnDiv button {
+    font-size: 16px;
+    width: 200px;
+    line-height: 20px;
+  }
+
+  .counter {
+    width: 160px;
+    height: 160px;
+    margin: 1em;
+  }
+
+  .numberStyling {
+    font-size: 50px;
+  }
+
+  .textStyling {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 200px) {
+  .boxStyling {
+    font-size: 20px;
+  }
+
+  .btnDiv button {
+    font-size: 12px;
+    width: 150px;
+    line-height: 20px;
+  }
+}

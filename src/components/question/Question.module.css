@@ -1,0 +1,27 @@
+.questionDiv {
+  padding: 1em 1em;
+}
+
+.question {
+  font-family: "Castoro", cursive;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.options {
+  font-family: "Castoro", cursive;
+  font-size: 18px;
+}
+
+.optionStyling {
+  list-style-type: none;
+  padding: 0.25em 1em;
+}
+
+.option {
+  composes: optionStyling;
+}
+
+.correctOption {
+  composes: optionStyling;
+}
