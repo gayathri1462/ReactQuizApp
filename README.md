@@ -58,10 +58,6 @@ $ npm install
 $ npm start
 ```
 
-### License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ### Acknowledgments
 
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
